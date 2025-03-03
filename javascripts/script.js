@@ -58,16 +58,25 @@ function updateDateTime() {
     dayElement.textContent = `${weekday}`;
     dateElement.textContent = `${month} ${day} ${year}`;
 }
-
 updateDateTime();
 
-// Change background color randomly when clicking the theme button
+
 const themeButton = document.getElementById('theme-btn');
 const colors = ['#FF5733', '#33FF57', '#3357FF', '#F3C13A', '#8D3DAF', '#E91E63', '#00BCD4'];
 
 themeButton.addEventListener('click', () => {
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     document.body.style.backgroundColor = randomColor;
+});
+
+
+document.getElementById('blog-page').addEventListener('click', () => {
+    window.location.href = 'blog.html';
+});
+
+
+document.getElementById('back-to-desk').addEventListener('click', () => {
+    window.location.href = 'index.html';
 });
 
 
